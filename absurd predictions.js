@@ -16,7 +16,7 @@ function generatePrediction() {
             "invents a new energy source", "unlocks the code of reality", "predicts the end of the world",
             "hacks the human mind"
         ],
-        consequence: [
+        and: [
             "and accidentally resets Earth from scratch.",
             "and causes humans to speak in binary.",
             "and discovers that we are part of a simulation.",
@@ -33,10 +33,10 @@ function generatePrediction() {
     // Aleatoriedad de cada elemento del objeto 
     const object = data.object[Math.floor(Math.random() * data.object.length)];
     const action = data.action[Math.floor(Math.random() * data.action.length)];
-    const consequence = data.consequence[Math.floor(Math.random() * data.consequence.length)];
+    const and = data.and[Math.floor(Math.random() * data.and.length)];
     
     // Frase generada usando los 3 array del objeto
-    return `${object} ${action} ${consequence}`;
+    return `${object} ${action} ${and}`;
 }
 
 // Ejecutar función que contiene el objeto, a su vez 3 array, y 3 aleatoriedades en cada iteración
